@@ -1,4 +1,4 @@
-/* ─── WHATSAPP ─── */
+
 var WA_NUMBERS = ['543493495825', '543493440025'];
 
 function getWALink(message) {
@@ -9,23 +9,19 @@ function getWALink(message) {
   return 'https://wa.me/' + num;
 }
 
-/* ─── INIT ─── */
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ── Floating WA button ── */
   var waFloat = document.getElementById('wa-float');
   if (waFloat) {
     waFloat.href = getWALink('');
   }
 
-  /* ── Plan detail WA select button ── */
   var waSelect = document.getElementById('wa-select');
   if (waSelect) {
     var msg = waSelect.getAttribute('data-message') || '';
     waSelect.href = getWALink(msg);
   }
 
-  /* ── Scroll animations (IntersectionObserver) ── */
   var animEls = document.querySelectorAll('.animate-in');
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
@@ -39,17 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     animEls.forEach(function (el) { observer.observe(el); });
   } else {
-    /* Fallback: show all immediately */
+
     animEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ── Hero bg subtle parallax / load trigger ── */
+
   var heroBg = document.querySelector('.hero-bg');
   if (heroBg) {
     setTimeout(function () { heroBg.classList.add('loaded'); }, 100);
   }
 
-  /* ── Sticky header shrink ── */
   var header = document.getElementById('header');
   function onScroll() {
     if (header) {
@@ -59,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* ── Active nav pill ── */
   function highlightNav() {
     var sections = document.querySelectorAll('section[id]');
     var scrollY = window.scrollY + 120;
@@ -73,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ── Mobile menu toggle ── */
   var toggle = document.getElementById('menu-toggle');
   var navList = document.getElementById('nav-list');
 
@@ -93,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ── Smooth scroll for anchor links ── */
+  
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var id = anchor.getAttribute('href').slice(1);
