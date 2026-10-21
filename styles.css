@@ -1,7 +1,5 @@
-/* ─── FUENTES ─── */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
 
-/* ─── VARIABLES ─── */
 :root {
   --bg:        #07101f;
   --bg2:       #0b1829;
@@ -12,8 +10,6 @@
   --border-hover: rgba(251,249,255,0.3);
   --accent:    #2563eb;
 }
-
-/* ─── RESET ─── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
 
@@ -38,7 +34,6 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 ul { list-style: none; }
 
-/* ─── HEADER ─── */
 #header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -63,7 +58,6 @@ ul { list-style: none; }
   width: auto;
 }
 
-/* NAV PILLS */
 nav ul {
   display: flex;
   align-items: center;
@@ -88,7 +82,6 @@ nav ul li a.active {
   border-color: var(--border-hover);
 }
 
-/* HAMBURGER */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -113,7 +106,6 @@ nav ul li a.active {
 .menu-toggle.open span:nth-child(2) { opacity: 0; }
 .menu-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ─── HERO ─── */
 #inicio {
   position: relative;
   height: 100vh;
@@ -166,7 +158,6 @@ nav ul li a.active {
   letter-spacing: 0.01em;
 }
 
-/* ─── BOTONES ─── */
 .btn-primary {
   display: inline-block;
   padding: 13px 34px;
@@ -242,8 +233,6 @@ nav ul li a.active {
   color: var(--text);
   border-color: var(--border-hover);
 }
-
-/* ─── SECCIONES ─── */
 .section {
   padding: 130px 52px;
 }
@@ -264,7 +253,6 @@ nav ul li a.active {
   text-align: center;
 }
 
-/* ─── SERVICIOS ─── */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -299,7 +287,6 @@ nav ul li a.active {
   letter-spacing: 0.01em;
 }
 
-/* ─── PLANES ─── */
 #planes { background: var(--bg); }
 
 .planes-grid {
@@ -358,8 +345,6 @@ nav ul li a.active {
 .plan-highlights li:last-child {
   border-bottom: none;
 }
-
-/* ─── PORTFOLIO ─── */
 #portfolio { background: var(--bg2); }
 
 .portfolio-item {
@@ -398,7 +383,6 @@ nav ul li a.active {
   border-color: rgba(251,249,255,0.5);
 }
 
-/* ─── CONTACTO ─── */
 #contacto { background: var(--bg); }
 
 .contact-info {
@@ -424,7 +408,6 @@ nav ul li a.active {
   color: var(--text);
 }
 
-/* ─── FOOTER ─── */
 footer {
   text-align: center;
   padding: 36px 24px;
@@ -434,7 +417,6 @@ footer {
   letter-spacing: 0.03em;
 }
 
-/* ─── WHATSAPP FLOTANTE ─── */
 .wa-float {
   position: fixed;
   bottom: 28px;
@@ -462,7 +444,6 @@ footer {
   fill: #fff;
 }
 
-/* ─── ANIMACIONES ─── */
 .animate-in {
   opacity: 0;
   transform: translateY(36px);
@@ -480,7 +461,6 @@ footer {
 .delay-3 { transition-delay: 0.36s; }
 .delay-4 { transition-delay: 0.48s; }
 
-/* ─── PÁGINA DE PLAN (DETALLE) ─── */
 .plan-detail {
   padding-top: 120px;
   min-height: 100vh;
@@ -550,7 +530,6 @@ footer {
   margin: 40px 0;
 }
 
-/* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .planes-grid {
     grid-template-columns: 1fr;
